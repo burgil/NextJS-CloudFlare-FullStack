@@ -1,5 +1,19 @@
 # Instructions to use Next.JS with CF FullStack
 
+**Buy Why?**
+
+> VERCEL:
+> 16MB per request x 1 million requests = 16 million megabytes / 1024MB = 15625TB x $20 per 1 TB = 312,500$ on vercel
+> 1MB per request x 1 million requests = 1 million megabytes / 1024MB = 976TB x $20 per 1 TB = 19,520$ on vercel
+> CLOUDFLARE:
+> any MB per request x 1 million requests = free (+$0.60 per additional million and only for backend traffic, AKA cloudflare workers - And for the frontend traffic it's 100% free - AKA cloudflare pages - Frontend traffic means all your HTML,CSS,JS,PNG and etc files)
+> You also get a free database to use... Look nothing is really free, but it's the cheapest by far. And no credit card is required to start!
+> THANK YOU CLOUDFLARE FOR ALLOWING ME TO GROW (REALISTICALLY) AS I GO ⛅🌩🙏
+
+**Don't believe me?**
+
+*Check for yourself* [here](https://workers.cloudflare.com/) and [here](https://pages.cloudflare.com/) (Scroll down for the pricing - **No credit card required to start**)
+
 [Demo](https://nextjscfsupport.pages.dev)
 
 ![Next.JS with CF FullStack](preview.png)
@@ -217,9 +231,9 @@ export default nextConfig;
 
 ### 8. Create functions/api/login.ts
 
-Create your first route for the backend for /api/login
+Create your first backend route for /`api/login`
 
-For now I used an example GET request but you can google "cloudflare workers/functions post request", gpt it or ask Burgil how to use POST requests..
+For now I used an example GET request but you can google `"cloudflare workers/functions post request"`, gpt it or ask Burgil how to use POST requests..
 
 ```ts
 interface Env {
