@@ -24,7 +24,7 @@
 
 > THANK YOU CLOUDFLARE FOR ALLOWING ME TO GROW (REALISTICALLY) AS I GO ⛅🌩🙏
 
-*500 builds per month? And do they mean by 1 build at a time?*
+*Only 500 builds per month? And what do they mean by 1 build at a time?*
 
 > A build counts for when you run `pnpm deploy`, it takes around 30 seconds to complete, during this 30 seconds only 1 built can be made, and only 500 builds per month, look they need to distribute your HTML,CSS,JS,PNG.. files on all their 275+ data centers (tons of computers) and you get it for free so no complains! or just pay them $20 lol!
 
