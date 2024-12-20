@@ -2,6 +2,8 @@
 
 [Demo](https://nextjscfsupport.pages.dev)
 
+![Next.JS with CF FullStack](preview.png)
+
 > [!IMPORTANT]  
 > You don't have to clone this repository, The entire reproduction steps can be found below!
 
