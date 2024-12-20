@@ -164,6 +164,10 @@ SERVICE_X_DATA = { URL = "service-x-api.dev.example", MY_ID = 123 }
 ```ts
 import type { NextConfig } from "next";
 
+// Since we want the development server to redirect traffic to /api/ from the frontend at http://localhost:3000 to the backend at http://localhost:8788
+// We need to set up "rewrites", NextJS warns you that these rewrites will not work in production after you build
+// But we don't care because wrangler automatically binds the "functions" directory to the frontend on production
+// We just need it to work in development too
 const warn = console.warn;
 console.warn = (...args) => {
   if (args[0].trim().includes('Specified "rewrites" will not automatically work with "output: export". See more info here: https://nextjs.org/docs/messages/export-no-custom-routes')) return;
