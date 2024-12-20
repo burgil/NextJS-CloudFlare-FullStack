@@ -37,11 +37,13 @@ http://localhost:3000
 CTRL+C
 ```
 
+### 2. Install the workers types
+
 ```bash
 pnpm add -D @cloudflare/workers-types
 ```
 
-### 2. Create wrangler.toml
+### 3. Create wrangler.toml
 
 Modify the name in `wrangler.toml`
 
@@ -140,7 +142,7 @@ SERVICE_X_DATA = { URL = "service-x-api.dev.example", MY_ID = 123 }
 # id = "<PRODUCTION_NAMESPACE_ID>"
 ```
 
-### 3. Add to .gitignore
+### 4. Add to .gitignore
 
 ```text
 # wrangler files
@@ -148,7 +150,7 @@ SERVICE_X_DATA = { URL = "service-x-api.dev.example", MY_ID = 123 }
 .dev.vars
 ```
 
-### 4. Modify package.json
+### 5. Modify package.json
 
 ```json
   "scripts": {
@@ -161,7 +163,7 @@ SERVICE_X_DATA = { URL = "service-x-api.dev.example", MY_ID = 123 }
     "lint": "next lint"
 ```
 
-### 5. Modify next.config.ts
+### 6. Modify next.config.ts
 
 ```ts
 import type { NextConfig } from "next";
@@ -204,7 +206,7 @@ export default nextConfig;
 
 ```
 
-### 6. Modify tsconfig.json
+### 7. Modify tsconfig.json
 
 ```json
 {
@@ -213,7 +215,7 @@ export default nextConfig;
     "types": ["@cloudflare/workers-types"],
 ```
 
-### 7. Create functions/api/login.ts
+### 8. Create functions/api/login.ts
 
 Create your first route for the backend for /api/login
 
@@ -241,7 +243,7 @@ interface Env {
 }
 ```
 
-### 8. To start the frontend run
+### 9. To start the frontend run
 
 ```bash
 pnpm start
@@ -249,7 +251,7 @@ pnpm start
 
 [http://localhost:3000](http://localhost:3000)
 
-### 9. To start the backend run
+### 10. To start the backend run
 
 ```bash
 pnpm start:backend
@@ -257,13 +259,13 @@ pnpm start:backend
 
 [http://localhost:8788/api/login](http://localhost:8788/api/login)
 
-### 10. To deploy run
+### 11. To deploy run
 
 ```bash
 pnpm run deploy
 ```
 
-### 11. Connecting the Frontend with the Backend
+### 12. Connecting the Frontend with the Backend
 
 A) Create `my-app\src\app\LoginButton.tsx` or wherever else you want it
 
