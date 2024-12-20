@@ -10,9 +10,9 @@ export default function LoginFormComponent() {
     const [errorMessage, setErrorMessage] = useState("");
 
     function getCookie(cname: string) {
-        let name = cname + "=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
+        const name = cname + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) == ' ') {
@@ -174,12 +174,12 @@ export default function LoginFormComponent() {
                             {isLoading ? "Logging in..." : "Login"}
                         </button>
                     </form>
-                    <p>But is it really secure? YES! Let's try to "hack it": Welcome, {localStorage.getItem('username')}! (Username is missing)</p>
+                    <p>But is it really secure? YES! Lets try to hack it: Welcome, {localStorage.getItem('username')}! (Username is missing)</p>
                     <button
                         onClick={handlePrivateTODO}
                         className="m-auto bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-200 ease-in-out"
                     >
-                        Get your private TODO list... (Doesn't work)
+                        Get your private TODO list... (Does not work)
                     </button>
                 </>
             )}
