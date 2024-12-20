@@ -2,6 +2,9 @@
 
 [Demo](https://nextjscfsupport.pages.dev)
 
+> [!IMPORTANT]  
+> You don't have to clone this repository, The entire reproduction steps can be found below!
+
 ## Next.JS SSG (Static Site Generation)
 
 By default, Next.js pre-renders pages using [Static Generation](https://nextjs.org/docs/pages/building-your-application/rendering/static-site-generation) without fetching data. Here's an example:
@@ -472,7 +475,8 @@ Click the Test Login API button - As you can see it works in both production and
 
 To add a .com domain simply [get one](https://domains.cloudflare.com/) and connect it in the [dashboard](https://dash.cloudflare.com/)
 
-Note: Creating a `.pages.dev` domain initially takes a lot of time so wait like 5 minutes before the page is working
+> [!NOTE]  
+> Note: Creating a `.pages.dev` domain initially takes a lot of time so wait like 5 minutes before the page is working
 
 ### 15. What's next?
 
