@@ -1,20 +1,8 @@
+import { REPLACE_ME_WITH_D1_DB, TEMPORARY_TOKENS } from "../../example_database";
+
 interface Env {
 	API_HOST: string;
 }
-
-const REPLACE_ME_WITH_D1_DB: {
-	[key: string]: {
-		pass: string
-	}
-} = {
-	"admin@example.com": {
-		pass: "1234!!##$$"
-	}
-}
-
-const TEMPORARY_TOKENS: {
-	[key: string]: string
-} = {};
 
 function generateToken(n: number) {
 	var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -44,15 +32,17 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 				});
 			}
 			// TODO Optimize code and convert to D1 database
-			if (REPLACE_ME_WITH_D1_DB[body.email]?.pass === body.password) {
+			const user = REPLACE_ME_WITH_D1_DB[body.email];
+			if (user?.pass === body.password) {
 				const response = Response.json({
 					message: "Successfully Logged In!",
-					success: true
+					success: true,
+					username: user.username
 				})
 				const newToken = generateToken(128);
-				TEMPORARY_TOKENS[body.email] = newToken;
-				response.headers.set("Set-Cookie", `token=${newToken}; path=/; secure; HttpOnly; SameSite=Strict`);
-				response.headers.set("Set-Cookie", `auth=true; path=/; secure; SameSite=Strict`);
+				TEMPORARY_TOKENS[newToken] = body.email;
+				response.headers.append("Set-Cookie", `token=${newToken}; path=/; secure; HttpOnly; SameSite=Strict`);
+				response.headers.append("Set-Cookie", `auth=true; path=/; secure; SameSite=Strict`);
 				return response;
 			} else {
 				return Response.json({
