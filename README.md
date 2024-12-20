@@ -14,7 +14,7 @@
 
 **CLOUDFLARE:**
 
-`any MB per request x 1 million requests = free`
+`any MB per request x 1 million requests = free - NO CREDIT CARD REQUIRED`
 
 **THE CATCH:**
 
