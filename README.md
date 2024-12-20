@@ -523,3 +523,11 @@ To add a .com domain simply [get one](https://domains.cloudflare.com/) and conne
 3. Ask burgil how to connect the D1 / KV database to your login system.
 
 4. Enjoy your super fast and super cheap and efficient website
+
+## Testing the full authentication example branch
+
+Username: `admin@example.com`
+
+Password: `1234!!##$$`
+
+TODO: Replace with a [D1 Database](https://developers.cloudflare.com/d1/)
