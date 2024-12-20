@@ -245,7 +245,7 @@ export default nextConfig;
 
 ### 8. Create functions/api/login.ts
 
-Create your first backend route for /`api/login`
+Create your first backend route for `/api/login`
 
 For now I used an example GET request but you can google `"cloudflare workers/functions post request"`, gpt it or ask Burgil how to use POST requests..
 
