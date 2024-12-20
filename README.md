@@ -1,22 +1,36 @@
 # Instructions to use Next.JS with CF FullStack
 
+[Demo](https://nextjscfsupport.pages.dev)
+
+![Next.JS with CF FullStack](preview.png)
+
 **Buy Why?**
 
-> VERCEL:
-> 16MB per request x 1 million requests = 16 million megabytes / 1024MB = 15625TB x $20 per 1 TB = 312,500$ on vercel
-> 1MB per request x 1 million requests = 1 million megabytes / 1024MB = 976TB x $20 per 1 TB = 19,520$ on vercel
-> CLOUDFLARE:
-> any MB per request x 1 million requests = free (+$0.60 per additional million and only for backend traffic, AKA cloudflare workers - And for the frontend traffic it's 100% free - AKA cloudflare pages - Frontend traffic means all your HTML,CSS,JS,PNG and etc files)
-> You also get a free database to use... Look nothing is really free, but it's the cheapest by far. And no credit card is required to start!
+**VERCEL:**
+
+`16MB per request x 1 million requests = 16 million megabytes / 1024MB = 15625TB x $20 per 1 TB = 312,500$ on vercel`
+
+`1MB per request x 1 million requests = 1 million megabytes / 1024MB = 976TB x $20 per 1 TB = 19,520$ on vercel`
+
+**CLOUDFLARE:**
+
+`any MB per request x 1 million requests = free`
+
+**THE CATCH:**
+
+(+$0.60 per additional million and only for backend traffic, AKA cloudflare workers - And for the frontend traffic it's 100% free - AKA cloudflare pages - Frontend traffic means all your HTML,CSS,JS,PNG and etc files)
+
+*You also get a free database to use... Look nothing is really free, but it's the cheapest by far. And no credit card is required to start!*
+
 > THANK YOU CLOUDFLARE FOR ALLOWING ME TO GROW (REALISTICALLY) AS I GO ⛅🌩🙏
+
+*500 builds per month? And do they mean by 1 build at a time?*
+
+> A build counts for when you run `pnpm deploy`, it takes around 30 seconds to complete, during this 30 seconds only 1 built can be made, and only 500 builds per month, look they need to distribute your HTML,CSS,JS,PNG.. files on all their 275+ data centers (tons of computers) and you get it for free so no complains! or just pay them $20 lol!
 
 **Don't believe me?**
 
 *Check for yourself* [here](https://workers.cloudflare.com/) and [here](https://pages.cloudflare.com/) (Scroll down for the pricing - **No credit card required to start**)
-
-[Demo](https://nextjscfsupport.pages.dev)
-
-![Next.JS with CF FullStack](preview.png)
 
 > [!IMPORTANT]  
 > You don't have to clone this repository, The entire reproduction steps can be found below!
