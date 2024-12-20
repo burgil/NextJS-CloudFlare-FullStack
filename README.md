@@ -259,7 +259,7 @@ export const onRequest: PagesFunction<Env> = async (context) => {
 };
 ```
 
-Enjoy TypeScript supprt out of the box! **(Rare Feature!)**
+Enjoy TypeScript support out of the box! **(Rare Feature!)**
 
 You have full access to all CF Workers types, For example:
 
