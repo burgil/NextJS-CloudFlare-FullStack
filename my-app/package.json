@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "start": "next dev --turbopack",
-    "start:backend": "pnpm dlx wrangler pages dev pages",
+    "start:backend": "pnpm dlx wrangler pages dev functions",
     "build": "next build",
     "deploy": "next build && pnpm dlx wrangler pages deploy ./out",
     "deploy:test": "pnpm dlx wrangler pages dev ./out",

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import LoginButton from "./LoginButton";
+import LoginButton from "../components/LoginButton";
+import LoginForm from "../components/LoginForm";
 
 export default function Home() {
 
@@ -69,6 +70,7 @@ export default function Home() {
             CF Workers
           </a>
         </div>
+        <LoginForm />
       </main >
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a

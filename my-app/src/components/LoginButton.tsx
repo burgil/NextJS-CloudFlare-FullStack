@@ -4,13 +4,7 @@ export default function LoginButton() {
 
     async function handleLogin() {
         try {
-            const response = await fetch("/api/login"/*, {
-                method: "POST",
-                body: JSON.stringify({
-                    email,
-                    pass
-                })
-            }*/)
+            const response = await fetch("/api/test")
             const data = await response.text();
             alert(data)
         } catch (e) {
